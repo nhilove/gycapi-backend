@@ -1,0 +1,28 @@
+server:
+  port: 8090
+spring:
+  main:
+    web-application-type: reactive
+wx:
+  mp:
+    token: xxx
+    aesKey: xxx
+    appId:
+    secret: xxx
+    config-storage:
+      http-client-type: HttpClient
+      key-prefix: wx
+      redis:
+        host: 127.0.0.1
+        port: 6379
+      type: Memory
+dubbo:
+  application:
+    name: dubbo-springboot-demo-custom
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    id: nacos-registry
+    address: nacos://localhost:8848
+
